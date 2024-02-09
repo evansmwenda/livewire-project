@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Carbon\Carbon;
 use Livewire\Component;
 
 class Comments extends Component
@@ -19,10 +20,12 @@ class Comments extends Component
         //add comment to comments array
         array_unshift($this->comments,
         [
-            'body' => 'Lorem ipgni exceptur!',
-            'created_at' => '1 min ago',
+            'body' => $this->newComment,
+            'created_at' => Carbon::now()->diffForHumans(),
             'author' => 'mwenda',
         ]) ;
+
+        $this->newComment = "";
     }    
     public function render()
     {

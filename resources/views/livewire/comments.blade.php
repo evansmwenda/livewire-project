@@ -3,7 +3,6 @@
         <div class="w-6/12">
             <h1 class="my-1-0 text-3xl">Comments</h1>
             <div class="my-4 flex">
-                {{$newComment}}
                 <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="What's on your mind?" 
                 wire:model="newComment">
                 <div class="py-2">
