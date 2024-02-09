@@ -1,7 +1,9 @@
 <?php
 
+use App\Livewire\Comments;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
+use App\Livewire\Posts\CreatePost;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/counter',Counter::class);
+Route::get('/posts',CreatePost::class);
+
+Route::get('/comments',Comments::class);
